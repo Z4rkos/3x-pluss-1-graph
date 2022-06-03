@@ -1,29 +1,28 @@
 import matplotlib.pyplot as plt
 import sys
 
+
 def run():
+    arg_error = "Please input a positive number as an argument."
     if len(sys.argv) != 2:
-        print("Please input a positive number as an argument.")
+        print(arg_error)
         return
     try:
         num = int(sys.argv[1])
     except:
-        print("Please input a positive number as an argument.")
+        print(arg_error)
         return
     if num < 0:
-        print("Please input a positive number as an argument.")
+        print(arg_error)
         return
     plot(num)
+
 
 def collatz(num):
     output = [num]
     while num != 1:
-        if num % 2 == 0:
-            num = num / 2
-            output.append(num) 
-        else:
-            num = (num * 3) + 1
-            output.append(num)
+        num = num / 2 if num % 2 == 0 else num * 3 + 1
+        output.append(num)
     return output
 
 
@@ -36,7 +35,6 @@ def plot(num):
     plt.xlabel('X-axis')
     plt.ylabel('Y-axis')
     plt.show()
-
 
 
 if __name__ == "__main__":
