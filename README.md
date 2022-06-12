@@ -4,4 +4,4 @@ A very simple python script that creates a graph based on the rules of the infam
 2. If the number is odd, multiply it by 3 and add 1, if it's even divide it by two.
 3. Repeat until it hits a loop.
 
-The conjecture asks whether repeating two simple arithmetic operations will eventually transform every positive integer into 1.
+The conjecture asks whether repeating these two simple arithmetic operations will eventually transform every positive integer into 1.
